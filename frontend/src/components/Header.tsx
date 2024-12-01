@@ -5,6 +5,7 @@ import { motion, MotionProps } from "framer-motion";
 import { FaAngleDown, FaUserAlt } from "react-icons/fa";
 import { GrDocumentUser } from "react-icons/gr";
 import { BsList } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   // const [scroll, setscroll] = useState<number>(0);
@@ -48,14 +49,20 @@ const Header: React.FC = () => {
               </div>
               {/* navigations  */}
               <div className="flex items-center ml-10 text-sm font-semibold cursor-pointer gap-6">
-                <div className="border-b-2 border-white hover:border-primary transition-all duration-300">
+                <div className="border-b-2 border-transparent hover:border-primary transition-all duration-300">
                   Home
                 </div>
 
+                <Link to={'/jobs'} className="border-b-2 border-transparent hover:border-primary transition-all duration-300">
+                  Fid Jobs
+                </Link>
+
                 {navgations?.map((navigation: NavigationsType, i: number) => {
-                  return <Employes key={i} index={i} navigation={navigation} />;
+                  return (
+                    <Navigation key={i} index={i} navigation={navigation} />
+                  );
                 })}
-                <div className="border-b-2 border-white hover:border-primary transition-all duration-300">
+                <div className="border-b-2 border-transparent hover:border-primary transition-all duration-300">
                   Contact
                 </div>
               </div>
@@ -114,7 +121,7 @@ interface EmployesProps {
   navigation: NavigationsType;
   index: number;
 }
-const Employes: React.FC<EmployesProps> = (props: EmployesProps) => {
+const Navigation: React.FC<EmployesProps> = (props: EmployesProps) => {
   const [isHovered, setisHovered] = useState<boolean>(false);
   const [isListVisible, setisListVisible] = useState(false);
 
@@ -142,7 +149,7 @@ const Employes: React.FC<EmployesProps> = (props: EmployesProps) => {
           setisListVisible(false);
         }, 2000);
       }}
-      className="group relative border-b-2 border-white hover:border-primary transition-all duration-300"
+      className="group relative border-b-2 border-transparent hover:border-primary transition-all duration-300"
     >
       <motion.div {...ButtonAnimation} className="flex items-center gap-2">
         {" "}
@@ -196,15 +203,6 @@ const navgations: NavigationsType[] = [
   },
   {
     title: "Candidate",
-    links: [
-      {
-        title: "create user",
-        to: "/",
-      },
-    ],
-  },
-  {
-    title: "Pages",
     links: [
       {
         title: "create user",
