@@ -27,13 +27,13 @@ const Jobs_boxes: React.FC = () => {
 
       {/* dob boxes  */}
       <div className="w-full mt-6 gap-3   flex-col grid 700px:grid-cols-2 1400px:grid-cols-3">
-        {[1, 2, 3, 4, 5, 6].map((item: number, index: number): JSX.Element => {
+        {[1, 2, 3, 4, 5, 6].map((index: number): JSX.Element => {
           return (
             <motion.div
-              initial={{  opacity: 0 }}
-              whileInView={{  opacity: 1 }}
-              transition={{ duration: 0.4  }}
-              className="w-full group cursor-pointer hover:-translate-y-2 transition-all duration-200 bg-slate-100 border-2 border-gray-200 rounded-md overflow-hidden p-2"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.4 }}
+              className="w-full  group cursor-pointer hover:-translate-y-2 transition-all duration-200 bg-slate-100 border-2 border-gray-200 rounded-md overflow-hidden p-2"
               key={index}
             >
               {/* company detail  */}
