@@ -91,7 +91,7 @@ export default Header;
 
 interface EmployesProps {
   navigation: NavigationsType;
-  index?: number;
+  index: number;
 }
 const Employes: React.FC<EmployesProps> = (props: EmployesProps) => {
   const [isHovered, setisHovered] = useState<boolean>(false);
@@ -111,11 +111,11 @@ const Employes: React.FC<EmployesProps> = (props: EmployesProps) => {
 
   return (
     <div
-      onMouseEnter={(e: React.MouseEvent<HTMLDivElement>): void => {
+      onMouseEnter={(): void => {
         setisHovered(true);
         setisListVisible(true);
       }}
-      onMouseLeave={(e: React.MouseEvent<HTMLDivElement>): void => {
+      onMouseLeave={(): void => {
         setisHovered(false);
         setTimeout(() => {
           setisListVisible(false);

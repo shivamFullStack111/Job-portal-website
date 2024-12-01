@@ -7,6 +7,7 @@ import LocomotiveScroll from "locomotive-scroll";
 const locomotiveScroll = new LocomotiveScroll();
 
 const App: React.FC = () => {
+  console.log(locomotiveScroll);
   return (
     <BrowserRouter>
       <Routes>

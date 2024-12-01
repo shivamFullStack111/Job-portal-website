@@ -7,6 +7,7 @@ import LocomotiveScroll from "locomotive-scroll";
 const locomotiveScroll = new LocomotiveScroll();
 
 const Home: React.FC = () => {
+  console.log(locomotiveScroll)
   return (
     <div className="px-[10px]  600px:px-[40px] 1000px:px-[81px]   ">
       <Header />

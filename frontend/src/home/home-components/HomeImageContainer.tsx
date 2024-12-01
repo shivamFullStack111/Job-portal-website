@@ -3,12 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import backImage from "../../images/homeLogo.png";
 import { itCities, jobCategories } from "../../utils";
 
-const jobsCat: string[] = [
-  "Web Designer ",
-  "Web Developer ",
-  "IOS Developer ",
-  "Android Developer",
-] as const;
+
 import LocomotiveScroll from "locomotive-scroll";
 
 const locomotiveScroll = new LocomotiveScroll();
@@ -26,8 +21,10 @@ const HomeImageContainer: React.FC = () => {
     transition: { duration: 1 },
   };
 
+  console.log(locomotiveScroll);
+
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: number;
 
     if (!isCatDivFocus) {
       // Only start scrolling animation if not focused
