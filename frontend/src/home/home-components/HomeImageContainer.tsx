@@ -4,9 +4,7 @@ import backImage from "../../images/homeLogo.png";
 import { itCities, jobCategories } from "../../utils";
 
 
-import LocomotiveScroll from "locomotive-scroll";
 
-const locomotiveScroll = new LocomotiveScroll();
 
 const HomeImageContainer: React.FC = () => {
   const categoryRef = useRef<HTMLDivElement | null>(null);
@@ -21,7 +19,6 @@ const HomeImageContainer: React.FC = () => {
     transition: { duration: 1 },
   };
 
-  console.log(locomotiveScroll);
 
   useEffect(() => {
     let interval: number;
@@ -55,9 +52,7 @@ const HomeImageContainer: React.FC = () => {
 
   return (
     <div
-      data-scroll
-      data-scroll-speed="-0.5"
-      className="600px:h-[80vh] z-20  max-1000px:mt-16   flex  justify-center flex-col-reverse 600px:grid   600px:grid-cols-2"
+      className="600px:h-[50vh] z-20   mt-16 800px:mt-24 1000px:mt-28   flex  justify-center flex-col-reverse 600px:grid   600px:grid-cols-2"
     >
       {/* left  */}
       <div className="flex flex-col w-full justify-center 600px:items-center">
@@ -167,7 +162,7 @@ const SearchBar: React.FC = () => {
         className="text-sm h-14 mt-8 bg-gray-300 rounded-3xl p-1"
       >
         <div className="bg-white w-full h-full grid grid-cols-3  rounded-3xl  items-center">
-          <div className="rounded-l-3xl relative border-r-2 w-full h-full border-gray-300 flex justify-center ">
+          <div className="rounded-l-3xl  relative border-r-2 w-full h-full border-gray-300 flex justify-center ">
             <input
               value={searchInput}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {

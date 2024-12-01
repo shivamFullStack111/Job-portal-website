@@ -1,28 +1,29 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+// import {  useEffect } from "react";
 import Logo from "../images/Logo.png";
 import { motion, MotionProps } from "framer-motion";
 import { FaAngleDown, FaUserAlt } from "react-icons/fa";
 import { GrDocumentUser } from "react-icons/gr";
 
 const Header: React.FC = () => {
-  const [scroll, setscroll] = useState<number>(0);
+  // const [scroll, setscroll] = useState<number>(0);
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setscroll(window.scrollY);
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     setscroll(window.scrollY);
+  //   });
+  // }, []);
 
   return (
     <>
       {/* desktop header  */}
-      <div className="hidden  z-50 1000px:block">
+      <div className="hidden   z-50 1000px:block">
         {" "}
         <div
-          style={{
-            backgroundColor: scroll > 10 ? "white" : "transparent",
-          }}
-          className="h-16   fixed top-0 left-0 px-[10px] z-50  600px:px-[40px] 1000px:px-[81px]  flex items-center justify-between  w-full"
+          // style={{
+          //   backgroundColor: scroll > 10 ? "white" : "transparent",
+          // }}
+          className="h-16   fixed top-0 left-0  px-[10px] z-50 bg-[#ffffff5b] backdrop-blur-lg  600px:px-[40px] 1000px:px-[81px]  flex items-center justify-between  w-full"
         >
           <div className="flex gap-4 items-center">
             <div className="flex items-center">
@@ -82,7 +83,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* mobile header  */}
-      <div className="h-16 block 1000px:hidden w-full fixed top-0 left-0 bg-gray-300 blur-sm"></div>
+      <div className="h-16 z-50 block 1000px:hidden w-full fixed top-0 left-0 bg-gray-300 blur-sm"></div>
     </>
   );
 };

@@ -1,24 +1,17 @@
 import React from "react";
 import Header from "../components/Header";
 import HomeImageContainer from "./home-components/HomeImageContainer";
-
-import LocomotiveScroll from "locomotive-scroll";
-
-const locomotiveScroll = new LocomotiveScroll();
+import Jobs_boxes from "./home-components/Jobs_boxes";
+import CompanySlider from "./home-components/CompanySlider";
 
 const Home: React.FC = () => {
-  console.log(locomotiveScroll)
   return (
     <div className="px-[10px]  600px:px-[40px] 1000px:px-[81px]   ">
       <Header />
       <HomeImageContainer />
-      <div className="relative">
-        {" "}
-        <div
-          className="h-[120vh] absolute  w-full z-10 bg-purple-400 "
-        ></div>
-      </div>
-      <div>hiii</div>
+
+      <Jobs_boxes />
+      <CompanySlider/>
     </div>
   );
 };
