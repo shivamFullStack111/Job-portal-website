@@ -3,9 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import backImage from "../../images/homeLogo.png";
 import { itCities, jobCategories } from "../../utils";
 
-
-
-
 const HomeImageContainer: React.FC = () => {
   const categoryRef = useRef<HTMLDivElement | null>(null);
   const [isCatDivFocus, setisCatDivFocus] = useState<boolean>(false);
@@ -18,7 +15,6 @@ const HomeImageContainer: React.FC = () => {
     },
     transition: { duration: 1 },
   };
-
 
   useEffect(() => {
     let interval: number;
@@ -51,9 +47,7 @@ const HomeImageContainer: React.FC = () => {
   };
 
   return (
-    <div
-      className="600px:h-[50vh] z-20   mt-16 800px:mt-24 1000px:mt-28   flex  justify-center flex-col-reverse 600px:grid   600px:grid-cols-2"
-    >
+    <div className="600px:min-h-[50vh] z-20   mt-16 800px:mt-24 1000px:mt-28   flex  justify-center flex-col-reverse 600px:grid   600px:grid-cols-2">
       {/* left  */}
       <div className="flex flex-col w-full justify-center 600px:items-center">
         {/* text  */}

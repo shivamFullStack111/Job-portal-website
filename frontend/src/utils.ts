@@ -1,5 +1,6 @@
 
   // https://preview.themeforest.net/item/jobhit-job-portal-html-template/full_screen_preview/29922683?_ga=2.53310824.1598329238.1732959138-880168314.1732959138
+  // https://preview.themeforest.net/item/jobbox-job-portal-react-nextjs-template/full_screen_preview/40386669?_ga=2.153631096.1598329238.1732959138-880168314.1732959138 
   export const jobCategories: string[] = [
     "Software Development",
     "Data Science",

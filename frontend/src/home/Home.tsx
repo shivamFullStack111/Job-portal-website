@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import HomeImageContainer from "./home-components/HomeImageContainer";
 import Jobs_boxes from "./home-components/Jobs_boxes";
 import CompanySlider from "./home-components/CompanySlider";
+import Mail_us from "./home-components/Mail_us";
 
 const Home: React.FC = () => {
   return (
@@ -11,7 +12,8 @@ const Home: React.FC = () => {
       <HomeImageContainer />
 
       <Jobs_boxes />
-      <CompanySlider/>
+      <CompanySlider />
+      <Mail_us />
     </div>
   );
 };
