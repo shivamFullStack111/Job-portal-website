@@ -7,6 +7,7 @@ const Mail_us: React.FC = () => {
 
   return (
     <div
+      id="mail-us"
       style={{ backgroundImage: `url('${greenBackground}')` }}
       className="w-full py-10 p-2 bg-primary rounded-lg mt-6 flex-col flex justify-center items-center"
     >

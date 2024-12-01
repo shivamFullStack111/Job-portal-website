@@ -47,7 +47,10 @@ const HomeImageContainer: React.FC = () => {
   };
 
   return (
-    <div className="600px:min-h-[50vh] z-20   mt-16 800px:mt-24 1000px:mt-28   flex  justify-center flex-col-reverse 600px:grid   600px:grid-cols-2">
+    <div
+      id="main-div"
+      className="600px:min-h-[50vh] z-20    mt-16 800px:mt-24 1000px:mt-28   flex  justify-center flex-col-reverse 600px:grid   600px:grid-cols-2"
+    >
       {/* left  */}
       <div className="flex flex-col w-full justify-center 600px:items-center">
         {/* text  */}

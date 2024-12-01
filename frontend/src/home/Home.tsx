@@ -4,6 +4,7 @@ import HomeImageContainer from "./home-components/HomeImageContainer";
 import Jobs_boxes from "./home-components/Jobs_boxes";
 import CompanySlider from "./home-components/CompanySlider";
 import Mail_us from "./home-components/Mail_us";
+import Footer from "../components/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
       <Jobs_boxes />
       <CompanySlider />
       <Mail_us />
+      <Footer />
     </div>
   );
 };

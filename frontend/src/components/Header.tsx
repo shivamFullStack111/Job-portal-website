@@ -4,6 +4,7 @@ import Logo from "../images/Logo.png";
 import { motion, MotionProps } from "framer-motion";
 import { FaAngleDown, FaUserAlt } from "react-icons/fa";
 import { GrDocumentUser } from "react-icons/gr";
+import { BsList } from "react-icons/bs";
 
 const Header: React.FC = () => {
   // const [scroll, setscroll] = useState<number>(0);
@@ -83,7 +84,26 @@ const Header: React.FC = () => {
       </div>
 
       {/* mobile header  */}
-      <div className="h-16 z-50 block 1000px:hidden w-full fixed top-0 left-0 bg-gray-300 blur-sm"></div>
+      <div className="h-14 flex items-center justify-between px-3 z-50 block  1000px:hidden w-full fixed top-0 left-0  bg-[#ffffff5b] backdrop-blur-lg">
+        <div className="flex items-center">
+          <img className="h-8 w-14  " src={Logo} alt="" />
+          <div className="relative ">
+            <motion.div
+              initial={{ width: "100%", height: "100%" }}
+              animate={{ width: 0 }}
+              transition={{ duration: 0.4 }}
+              className="absolute w-full  h-full bg-primary"
+            ></motion.div>
+            <div className="flex items-center -translate-x-2 text-black font-semibold text- px-1">
+              {" "}
+              job{" "}
+              <p className="text-2xl  pacifico-regular ml-1 text-primary"> f</p>
+              <span className="underline decoration-primary">inder</span>
+            </div>
+          </div>
+        </div>
+        <BsList className=" text-2xl" />
+      </div>
     </>
   );
 };

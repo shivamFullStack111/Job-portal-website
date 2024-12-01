@@ -3,11 +3,10 @@ import { jobCategories } from "../../utils";
 import { CiLocationOn, CiTimer } from "react-icons/ci";
 import { PiBagFill } from "react-icons/pi";
 import { FaAngleDown } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 const Jobs_boxes: React.FC = () => {
   return (
-    <div className="flex flex-col mt-10 items-center ">
+    <div id="jobs" className="flex flex-col mt-10 items-center ">
       <p className="text-2xl  1000px:text-3xl font-semibold">Jobs of the day</p>
       <p className="text-sm 800px:text-[16px] 1000px:text-lg text-gray-500 font-semibold">
         Search and connect with the right candidates faster.
